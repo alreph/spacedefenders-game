@@ -1,2 +1,2 @@
-# spacedefenders-game
-Repository for SPACEDEFENDERS game.
+# SPACEDEFENDERS
+Repository for SPACEDEFENDERS game by alreph.
