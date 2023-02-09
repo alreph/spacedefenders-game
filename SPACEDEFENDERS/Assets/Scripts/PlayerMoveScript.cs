@@ -9,7 +9,7 @@ public class PlayerMoveScript : MonoBehaviour
     [SerializeField]private float rotationSpeed = 10f;
     private Vector3 mouseClick;
     private Vector3 mousePosition;
-    private Camera sceneCamera;
+    private Camera cam;
     [HideInInspector] public bool isMoving = false;
 
     void Start()
@@ -20,7 +20,7 @@ public class PlayerMoveScript : MonoBehaviour
     void Update()
     {
         // store the position of the mouse
-        mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
         MoveLogic();
         if(!isMoving) FaceMouse();
     }
@@ -28,7 +28,7 @@ public class PlayerMoveScript : MonoBehaviour
     void Init()
     {
         mouseClick = transform.position;
-        if (!sceneCamera) sceneCamera = Camera.main;
+        if (!cam) cam = Camera.main;
     }
     
     // make object face the mouse cursor
