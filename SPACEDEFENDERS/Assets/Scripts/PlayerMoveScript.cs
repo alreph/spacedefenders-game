@@ -19,7 +19,8 @@ public class PlayerMoveScript : MonoBehaviour
 
     void Update()
     {
-        mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);    //store the position of the mouse
+        // store the position of the mouse
+        mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
         MoveLogic();
         if(!isMoving) FaceMouse();
     }
